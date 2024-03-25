@@ -1,0 +1,149 @@
+==========GIT==============
+Explain the purpose of a .gitignore file and how to use it.
+
+Git pull vs git fetch(git fetch+ git merge ==> git pull)
+
+What is a stash and when would you use git stash?
+
+How do you revert to a previous commit in Git?
+
+Scenario: You've accidentally committed sensitive information (e.g., passwords, API keys) to a Git repository. How would you remove this information from the repository history?
+git filter-branch --force --index-filter "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE" --prune-empty --tag-name-filter cat -- --all
+
+Scenario: You've accidentally deleted a file in your local working directory, but it hasn't been staged or committed yet. How would you restore the deleted file?
+
+Scenario: You're collaborating with a team on a Git repository, and you encounter a merge conflict while trying to merge a feature branch into the main branch. How would you resolve this conflict?
+
+Scenario: A team member has mistakenly pushed a large file to the Git repository, causing the repository size to increase significantly. How would you handle this situation to reduce the repository size?
+
+Scenario: You're working on a feature branch, and you realize that you need to make a quick fix in the main branch. How would you switch to the main branch, make the fix, and then switch back to your feature branch without losing your work?
+
+Scenario: You've made several commits in your feature branch, but you realize that one of the earlier commits introduced a bug. How would you revert only that specific commit while keeping the rest of your changes intact?
+
+Scenario: You've made several commits in your local branch, but you realize that you need to rebase your changes onto the latest changes from the main branch before pushing your commits. How would you perform a rebase operation?
+
+Scenario: Your project requires maintaining multiple versions simultaneously (e.g., a stable release and a development version). How would you manage branches and releases to support this requirement effectively?
+
+
+===========MAVEN======================================
+Which file is used to define dependency in Maven? POM
+What is a POM file in Maven, and what does it contain?
+What are the different phases of the Maven build lifecycle? Can you explain each phase?
+What is the purpose of the settings.xml file in Maven, and where is it located?
+What is the difference between the clean, package, and install goals in Maven?
+Scenario: During the build process, you notice that Maven is downloading dependencies from the internet every time, even though they haven't changed. How would you optimize Maven to cache dependencies locally and improve build performance?	
+You're working on a Maven project, and one of your dependencies is not available in any public Maven repository. How would you manage this situation?
+Your Maven build is failing due to conflicting versions of dependencies. How would you identify and resolve dependency conflicts in your project?
+
+
+=============Jenkins=============================
+I want to move or copy Jenkins from one server to another. Is it possible? If yes, how?
+What are the types of Jenkins pipelines?
+Your Jenkins pipeline is failing intermittently during the build stage, and you suspect it's due to network issues. How would you troubleshoot this problem?
+A new developer has joined your team, and they need access to Jenkins to create and run their pipelines. How would you grant them the necessary permissions while ensuring security best practices?
+
+Your Jenkins server is experiencing performance issues, and builds are taking much longer than usual to complete. What steps would you take to diagnose and improve the performance of Jenkins?
+
+You need to deploy your application to multiple environments (e.g., development, staging, production) using Jenkins pipelines. How would you configure your pipelines to handle environment-specific configurations and promote builds across different stages?
+
+A critical security vulnerability has been discovered in one of the dependencies of your project. How would you update the affected dependency and ensure that all Jenkins pipelines using it are automatically rebuilt with the patched version?
+
+Your Jenkins master server has crashed, and you need to restore it from backup. Describe the steps you would take to restore Jenkins to its previous state, including configuration, job definitions, and plugin settings.
+
+You want to implement a blue-green deployment strategy for your application using Jenkins. Explain how you would set up your Jenkins pipelines to achieve blue-green deployments and ensure zero-downtime deployments.
+
+A new version of a critical library used in your project has been released. How would you automate the process of updating the dependency in your Jenkins pipelines, running tests, and promoting the build to uat if all tests pass?
+
+=============Terraform================================================
+Define null resource in Terraform.
+Does Terraform support multi-provider deployments?
+What are some of the built-in provisioners available in Terraform?
+What do you understand by a Tainted Resource?
+Give the terraform configuration for creating a single EC2 instance on AWS ?	
+How will you upgrade plugins on Terraform?
+You want to create a new VPC (Virtual Private Cloud) on AWS using Terraform. Outline the steps you would take to define the VPC configuration and deploy it ?
+You need to update the instance type of an existing EC2 instance on AWS using Terraform. Describe the process you would follow to make this change safely?
+Explain the difference between Terraform's "count" and "for_each" meta-arguments when defining multiple instances of a resource.
+
+Explain the key features of Terraform?
+
+Declarative Language: Terraform uses a declarative language called HashiCorp Configuration Language (HCL) to define infrastructure resources. This makes it easier to understand and manage infrastructure as code.
+Multi-Cloud Support: Terraform supports many cloud providers, including AWS, Microsoft Azure, Google Cloud Platform, and more. It also supports on-premises data centers.
+Resource Management: Terraform enables you to manage infrastructure resources such as virtual machines, networks, and storage.
+State Management: Terraform keeps track of the state of infrastructure resources, allowing you to see the current state of infrastructure and manage changes.
+Modularity: Terraform allows you to create reusable modules, making managing and provisioning complex infrastructure easier.
+
+What is a Terraform module?
+How does Terraform ensure the consistency of infrastructure configurations? 
+Can Terraform be used for on-premise infrastructure?
+How does Terraform handle dependencies between resources?
+
+
+=============DOCKER===================================================
+Explain the components of a Docker container and the purpose of each. For example, images, containers, Docker daemon, and Docker CLI.
+What is the difference between Docker images and Docker containers?
+How do you optimize Docker images for size and performance?
+i)Use multi-stage builds, Minimize layers: Each RUN, COPY, or ADD command creates a new layer in your image. Combine these commands where possible to reduce the number of layers, using chaining commands (&&) in a single RUN instruction.
+ii)Clean up in the same layer: Remove unnecessary files created by package managers within the same Dockerfile command. 
+Describe a Docker container’s lifecycle ?
+What is host port and container port?
+
+Scenario: You have a Node.js application that you want to containerize using Docker. How would you create a Dockerfile to package the application into a Docker image?
+
+Scenario: You need to run a single command inside an existing Docker container without starting a new instance. How would you accomplish this using Docker CLI?
+
+Scenario: You want to share a Docker image you've built with a colleague who works remotely. What steps would you take to share the image with them?
+
+Scenario: You have a Docker container running a web server, and you need to expose it on port 8080 of your host machine. How would you configure port forwarding to achieve this?
+
+Scenario: You are debugging an issue with a Docker container and need to view its logs in real-time. How would you use Docker CLI to stream the container's logs to your terminal?
+
+Scenario: You want to clean up unused Docker images and containers to free up disk space on your machine. What Docker commands would you use to remove dangling images and stopped containers?
+
+Scenario: You have a Dockerfile for building a Python application, and you want to include additional dependencies specified in a requirements.txt file. How would you modify the Dockerfile to install these dependencies during the build process?
+
+Scenario: You want to inspect the metadata of a Docker image, such as its size and creation date. How would you use Docker CLI to display this information for a specific image? docker image inspect <image_name_or_id>
+
+
+===========AWS=============
+How are Spot Instance, On-demand Instance, and Reserved Instance different from one another?
+Why do we make subnets?
+How many total VPCs per account/region and subnets per VPC can you have? 5 and 200
+You have connected four instances to ELB. To automatically terminate your unhealthy instances and replace them with new ones, which functionality would you use? Auto-scaling groups
+Your organization has around 50 IAM users. Now, it wants to introduce a new policy that will affect the access permissions of an IAM user. How can it implement this without having to apply the policy at the individual user level?
+I created a web application with autoscaling. I observed that the traffic on my application is the highest on Wednesdays and Fridays between 9 AM and 7 PM. What would be the best solution for me to handle the scaling? (configure autoscaling)
+You have created a VPC with private and public subnets. In what kind of subnet would you launch the database servers?
+Your company wants you to propose a solution so that the company’s data center can be connected to the Amazon cloud network. What would your proposal be? The data center can be connected to the Amazon cloud network by establishing a virtual private network (VPN) between the VPC and the data center. A virtual private network lets you establish a secure pathway or tunnel from your premise or device to the AWS global network.
+Can you change the private IP address of an EC2 instance while it is in running or in a stopped state?
+
+
+==============Kubernetes=================
+Can you explain the architecture of Kubernetes, including its master and worker components?
+How does Kubernetes handle scaling of applications, both vertically and horizontally?
+
+Scenario: You have a simple web application that you want to deploy on Kubernetes. How would you create a Kubernetes Deployment resource to manage the application's container?
+
+Scenario: You need to scale a Kubernetes Deployment to handle increased traffic. Describe how you would use the kubectl scale command to adjust the number of replicas for the Deployment.
+
+Scenario: You want to expose your Kubernetes Deployment to external traffic. What Kubernetes resource would you use to create a publicly accessible endpoint for the Deployment, and how would you configure it?
+
+Scenario: You have a stateful application that requires persistent storage. How would you define a PersistentVolumeClaim resource in Kubernetes to provide storage to the application?
+
+Scenario: You are troubleshooting an issue with a Kubernetes Pod, and you need to view the logs of a specific container within the Pod. How would you use the kubectl logs command to retrieve container logs?
+
+Scenario: You want to deploy a Kubernetes Pod with multiple containers that need to communicate with each other. How would you define a Pod specification with multiple container definitions?
+
+Scenario: You have a Kubernetes Deployment with multiple replicas, and you want to perform a rolling update to a new version of the application without causing downtime. Describe how you would achieve this using Kubernetes rolling update strategies.
+
+Scenario: You are deploying a Kubernetes Service to load balance traffic to multiple Pods. How would you define a Service resource to distribute traffic based on the Pod's IP addresses?
+
+Scenario: You want to schedule a Kubernetes CronJob to run a job periodically at a specific time interval. How would you define a CronJob resource to schedule the job to run at regular intervals?
+
+
+How can you implement secrets management and configuration management for applications running in Kubernetes? (Secrets as code tools, ConfigMaps, environment variables)
+Describe different storage options available for persistent data in Kubernetes (e.g., Persistent Volumes, Local Storage).
+Explain how Kubernetes handles rolling updates and rollbacks for deployments. (Blue/green deployments, canary deployments)
+How do you monitor and troubleshoot issues in a Kubernetes cluster? (Monitoring tools like Prometheus, logs management, kubectl commands)
+Discuss the concept of DaemonSets in Kubernetes and their use cases. (Scheduling Pods on every Node in the cluster)
+What are some benefits of using Kubernetes? (Scalability, high availability, resource management)
+What is Kubernetes and what problem does it solve? (Container orchestration, managing container lifecycles)
