@@ -147,3 +147,11 @@ How do you monitor and troubleshoot issues in a Kubernetes cluster? (Monitoring 
 Discuss the concept of DaemonSets in Kubernetes and their use cases. (Scheduling Pods on every Node in the cluster)
 What are some benefits of using Kubernetes? (Scalability, high availability, resource management)
 What is Kubernetes and what problem does it solve? (Container orchestration, managing container lifecycles)
+
+
+Bonus:Unix
+Authentication vs autherization
+write a shell script to see if the file exists on a directory if not create a file
+How do you list the specific column names in unix(AWK)
+How do you replace text in a file using sed?
+What is the difference between awk and sed?
