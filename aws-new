@@ -1,0 +1,102 @@
+*******************AWS******************************
+Scenario-based: You're tasked with migrating a company's on-premise database to the cloud using AWS.  What factors would you consider when designing the migration strategy, and what AWS services might you utilize?
+**Factors to Consider:**
+    * **Database size and type:**  Consider data volume and compatibility with AWS database services (RDS, Aurora, DynamoDB).
+    * **Downtime tolerance:**  Plan for minimal disruption during migration (e.g., using AWS Database Migration Service).
+    * **Security:**  Ensure proper IAM roles and access controls for the migrated database.
+    * **Cost optimization:**  Choose the most cost-effective service based on usage patterns (e.g., reserved instances for predictable workloads).
+**Potential AWS Services:**
+    * **AWS Database Migration Service (DMS):** simplifies database migration to various AWS database options.
+    * **Amazon S3:**  for temporary storage of database backups during migration.
+    * **Amazon EC2:**  for launching temporary instances to facilitate the migration process.
+    * **Amazon VPC:**  to create a secure virtual network for the migrated database.
+
+2. Security: How would you implement a secure and scalable architecture for a web application on AWS?
+
+Here's a possible approach to secure and scalable architecture:
+
+* **Use Amazon VPC:**  Isolate your application resources in a private network with security groups to control inbound and outbound traffic.
+* **Implement IAM roles:**  Assign least privilege access to resources for different application components.
+* **Utilize Amazon S3 for static content:**  Offload static files (images, JS) to S3 for scalability and content delivery network (CDN) integration with CloudFront.
+* **Load balance with Elastic Load Balancing (ELB):**  Distribute traffic across multiple EC2 instances for high availability and scalability. 
+* **Automate scaling with Auto Scaling:**  Automatically scale resources (EC2 instances) based on predefined metrics for optimal performance.
+* **Encrypt data at rest and in transit:**  Use AWS Key Management Service (KMS) to manage encryption keys for data security.
+
+3. Cost Optimization: A client complains their AWS bill is higher than expected. Describe your approach to identify cost-saving opportunities.
+
+Here's how you might identify cost-saving opportunities:
+
+* **Analyze AWS Cost Explorer:**  Identify the services and resources consuming the most cost.
+* **Review EC2 instances:**  Are you using the right instance types for your workload? Consider switching to more cost-effective options (e.g., spot instances for non-critical tasks).
+* **Optimize storage usage:**  Move infrequently accessed data to cheaper storage classes in S3 (e.g., Glacier for archival data).
+* **Utilize Reserved Instances (RIs):**  If you have consistent resource usage, commit to RIs for significant cost savings.
+* **Enable AWS Billing alerts:**  Set up alerts to notify you of unexpected spikes in spending.
+
+4. Service-specific: Briefly explain the difference between Amazon S3 and Amazon EBS storage options. When would you choose one over the other?
+
+**Amazon S3:**
+
+* **Object storage:** Designed for storing large amounts of unstructured data (e.g., backups, logs, archives).
+* **Highly durable and scalable:** Offers high availability and data redundancy across multiple locations.
+* **Pay-per-use model:** You only pay for the storage you use, making it cost-effective for variable data volumes.
+
+**Amazon EBS:**
+
+* **Block storage:** Designed for attaching persistent storage to EC2 instances for applications.
+* **High performance:** Ideal for applications requiring frequent disk access and fast I/O operations.
+* **Ephemeral:** Data on EBS volumes is lost when the EC2 instance terminates. 
+
+**Choosing between S3 and EBS:**
+
+* Choose S3 for: Backups, logs, static website content, infrequently accessed data.
+* Choose EBS for: Database storage, application data requiring frequent access, boot volumes for EC2 instances.  
+
+5. Conceptual:  How does the concept of "fault tolerance" apply when building cloud systems on AWS?
+
+Fault tolerance refers to a system's ability to withstand and recover from failures without significant downtime or data loss. In AWS, you can achieve fault tolerance through several mechanisms:
+
+* **Redundancy:**  Distribute your application across multiple Availability Zones (AZs) within a region to ensure redundancy if one AZ experiences an outage.
+* **Auto Scaling:**  Automatically spin up new instances to replace failing ones, maintaining application availability.
+* **Elastic Load Balancing:**  Distribute traffic across healthy instances and automatically reroute traffic away from failing ones.
+* **High Availability (HA) databases:**  Use services like Amazon RDS Multi-AZ deployments for automatic failover to a standby instance in case of a primary database failure.
+
+========================
+# EC2 and Compute Services:
+Describe a scenario where you chose EC2 over other compute services and why.
+Can you explain how you would set up auto-scaling for an application on EC2 instances?
+Have you worked with Spot Instances before? What are the advantages and considerations?
+
+#Storage Services:
+Share your experience migrating data to/from S3. How did you ensure data consistency and security?
+Have you utilized EBS snapshots for backup and recovery? Describe your approach.
+Can you explain how you would optimize storage costs for a high-traffic application using AWS storage services?
+
+#Networking Services:
+Walk us through a VPC design you implemented for a project. What considerations did you take into account?
+Have you set up VPN connections or Direct Connect to connect on-premises infrastructure with AWS? Explain the process.
+How do you ensure security and compliance within your VPC environment?
+
+#Security and Identity:
+Describe your experience implementing IAM roles and policies for least privilege access.
+Can you explain your approach to managing secrets and sensitive information in AWS?
+
+#High Availability and Disaster Recovery:
+Describe your experience designing and implementing high availability architectures on AWS.
+How do you ensure disaster recovery readiness for critical applications running on AWS?
+Have you worked with AWS services like Route 53, ELB, and Multi-AZ deployments for achieving high availability?
+
+# Cost Management:
+Describe a project where you successfully optimized costs for AWS resources. What strategies did you implement?
+Have you utilized AWS Budgets or Cost Explorer for cost monitoring and forecasting?
+What are some common cost optimization techniques you've employed for EC2, RDS, and S3?
+
+#Monitoring and Troubleshooting:
+How do you monitor AWS resources and applications for performance and availability?
+Discuss your experience setting up CloudWatch alarms and custom metrics for monitoring.
+How do you approach troubleshooting performance issues in a distributed AWS environment?
+Share a scenario where you identified and resolved a critical issue affecting production AWS resources.
+
+#Problem Solving and Troubleshooting:
+How do you approach troubleshooting issues in AWS environments, from infrastructure to application-level problems?
+Can you share a challenging incident you faced on AWS and how you resolved it?
+What tools and techniques do you use for performance tuning and optimization in AWS?
