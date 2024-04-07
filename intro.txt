@@ -1,0 +1,180 @@
+ROLES & RESPONSIBILITIES
+----------------------------------------------------------------------
+0. tell me about yourself?
+14. what is your day to day activities?
+20. explain project work flow?
+12. what methodology are you using in your organization?
+17. what is scrum?
+
+
+AWS
+----------------------------------------------------------------------
+3. what security measures to take for s3?
+5. have you worked on aws vpc?
+6. what did you do with security groups?
+
+
+GIT
+----------------------------------------------------------------------
+13. git revert vs git reset?
+12. git rebase vs git merge, when git rebase is used
+13. branching staratgies in git?
+14. git fork and pull request?
+2. what is difference between git fetch and git pull?
+3. what is git reset and command for that?
+4. what is branching strategy and why do we need feature release branch?
+13. what is octopus strategy in git?
+18. what is working tree in git?
+
+
+
+
+
+JENKINS
+----------------------------------------------------------------------
+9. how do you secure jenkins?
+1. if you forgot jenkins log in credintials & password how to troubleshhot?
+	
+	
+5. what is c.i?
+6. what is c.d? are you not using cont.deploy?
+12. jenkins master slave architecture?
+	Jenkins supports the master-slave architecture, i.e. many slaves work for a master.
+	It is also known as Jenkins Distributed Builds. It also allows you to run jobs on different environments
+	like Linux, Windows, MacOS, etc
+
+15. how do you install jenkins in linux machine?
+22. how do you take backup of jenkins?
+23. what are the plugins used in jenkins?
+9. jenkins how did you use Running jobs?
+1. i have 100 jobs out of which i should move 15 jobs from testing to staging environment
+3. how parall block executes after one job is executed. will it come out of the loop and execute new one?
+7. benfits of jenkins freestyle vs declarative pipeline?
+8. how do you execute job on to a particular node?
+10. docker image how do you build for first time in jenkins?
+14. which language are you using in jenkins delarative pipeline?
+
+PIPELINES?
+MASTER SLAVE?
+how to integrate diff tools?
+proxy setup why in jenkins?
+
+WHY MASTER SLAVE? perfomance increase
+how add the jenkins slave?
+
+
+
+
+MAVEN
+-----------------------------------------------------------------------
+10. maven snapshot vs release?
+1. what is symantic in maven?
+19. how do you upload the maven snapshot in nexus?
+20. what is install and deploy in maven?
+
+
+ANSIBLE
+----------------------------------------------------------------------
+6. what is ansible roles?
+7. if i want to install ansible playbook only on rhel7.5 how do you do that?
+3. how do you copy a file using ansible to a remote server?
+1. write a playbook to install apache on webservers and restart mysql on db servers?
+4. how do you write a playbook to explain about roles?
+5. what is ansible roles?
+6. how do you deploy an war file from one server to another using ansible?
+5. what is connection mechanism between ansible host and controller and how it communcates, architectures
+
+
+25tasks
+15th Failed 
+what will default default?
+in ansible Global varilals ignore_errors=yes
+
+Dynamic inventory
+modules
+
+
+DOCKER
+-----------------------------------------------------------------------
+4. which is the latest docker version?
+5. are you using docker ce or docker ee?
+21. what is entrypoint in docker?
+22. which version of git k8 are you using?
+23. what is hpa in k8?
+6. how do you install docker?
+   #curl docker, yum install -y install docker-engine, start n enable??
+7. how do you login to running container?
+   #docker exec -it container-id bash
+8. how to see list of runing process in docker?
+2. how do you install docker on rhel7.3 and also apache, if already installed just start the services in that case?
+5. how do you persist volumes in docker?
+10. write a command to persist docker volumes?
+12. what happens when a volume residing in host is lost and how do you make it persistent?
+15. have you ever worked on uderlying infrastructure?
+16. what is your involvment in docker?
+4. what made you to use docker?
+9. have you worked on docker compose?
+10. docker cmd vs entrypoint?
+11. docker copy vs add?
+14. why nexus is used as your docker registry?
+16. how do you increase memory for docker containers?
+17. i have a docker image of 5 gb how can i reduce it to 3gb?
+9. docker vs vm?
+11. docker file instructions used in deploying war file
+7. docker expose?
+
+
+KUBERNETES
+-----------------------------------------------------------------------
+6. what is k8 architecture?
+2. what is ingress?
+8. what is kubernetes?
+9. how do you check all pods in a particular namespace?
+13. why kubernetes when you have docker?
+17. how do you schedule nodes kubernetes cluster?
+16. what is your involvment in kubenrets?
+1. how do you create users in kubernetes?
+3. how do you create a single master and 3 node in k8?
+5. how do you take backup of kubernetes cluster?
+21. have you worked on production level in kubernetes?
+27. how do you monitor kubernetes?
+11. what is kubeconfig?
+8. what are the advantages of k8 over docker?
+9. what is k8?
+12. are you using kubernetes native?
+    #it is also called as kubeless which is faas. Dependent application which was built for kubernetes
+10. what is cli for kubernetes?
+    #kubectl
+
+
+
+LINUX
+-----------------------------------------------------------------------
+2. what is lsof
+3. what is sort command
+10. how do you check services in linux?
+15. whats the difference between rpm and yum?
+11. how do you add a disk and create filesystem in linux?
+1. what is /etc/fstab?
+2. what is command to check cpu, swap?
+7. how do you increasse lvm?
+8. disk usage of a directory?
+7. i have 15 python scripts how do you execute them using shell script?
+8. what is scp and scp is not executing what are the issues and how will you resolve it?
+18. what is the command to see firewall?
+19. how to check port of the few servers
+26. how to check disk usage of a particular directory?
+28. write a script for checking cpu utilization?
+2. how do you create public and private keys?
+16. have you worked on kernel development?
+1. what is ulimit
+   #ulimit command allows users to view/reduce their limits for the current shell of an user. only the root user can increase 
+    restriction above the specified hard limits. /etc/security/limits.conf is the config file. we have hard n soft limits
+
+   #ulimit -a  ------------>to display current settings
+
+
+
+WINDOWS
+--------------------------------------------------------------------------
+how do you configure winrm?
